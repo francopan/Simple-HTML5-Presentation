@@ -1,0 +1,36 @@
+.paper article {
+	color:#fff;
+	font-size: 25px;
+
+	background: 
+		linear-gradient(
+      		rgba(255, 0, 0, 0.7), 
+      		rgba(255, 0, 0, 0.45)
+    	),
+		url('img/background.png');
+}
+
+
+.paper article h1 {
+	color:#fff;
+	font-size: 50px;
+	text-align: center;
+	padding: 20px;
+}
+
+.paper article p, .paper article ul {
+	margin:30px;
+	float: left;
+}
+
+.paper article img{
+	float: right;
+	width: 250px;
+	border: 10px solid #fff;
+	box-shadow: 2px 2px 3px #ccc;
+	margin:10px;
+	display: inline-block;
+}
+
+
+			

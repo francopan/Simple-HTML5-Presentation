@@ -1,0 +1,105 @@
+<html>
+
+	<head>
+
+		<title>Slide Presentation</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+		<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/main.css" type="text/css">	
+
+		<!-- HERE YOU LINK THE THEME -->
+		<link rel="stylesheet" href="themes/RedOne/redone.css" type="text/css">	
+
+	</head>
+
+	<body onload="arrange()">
+
+		<!-- Start Page ( Start Button ) -->
+		<div class="over" style="display:block;" id="start">
+			<button onclick='document.getElementById("start").style.display = "none";document.getElementById("pages").getElementsByTagName("article")[0].style.opacity=1;document.getElementById("bottom").style.display = "block";'>
+				Start
+			</button>
+		</div>
+
+		<!-- Ending Page ( Restart Button ) -->
+		<div class="over" id="end">
+			<button onclick='arrange();document.getElementById("end").style.display = "none";document.getElementById("pages").getElementsByTagName("article")[0].style.opacity=1;'>Restart</button>
+		</div>
+
+		<!-- Main Content ( Slides ) -->
+		<section class="paper" id="pages">
+			<article>
+				<h1>Lorem Ipsum</h1>
+					<ul>
+						<li>
+							No habeo everti accumsan nec. Duo ut dolor doctus voluptatibus, an nec putant scripta. Saperet nominavi ponderum nam id. Cum ex verear temporibus interpretaris, est te sale legere quaerendum. Meliore voluptaria eos in. Ei modus iudicabit est, his solum ancillae an.
+						</li>
+						<li>
+							Nam nisl appetere eu, illud invenire eloquentiam mea te. Ad mea postea consectetuer, pro explicari constituam cu. Quas clita vim at, laudem repudiare dignissim eam ei, paulo suscipit appellantur ex est. Utinam erroribus neglegentur no vel, nullam adversarium ad qui.
+						</li>
+						<li>
+							Nam assum senserit eu, vim at dicta tritani. Mei dicam principes intellegat eu, mei an aliquid vulputate. Quo postulant instructior deterruisset id. Ferri melius vidisse quo ad, pro nostrum verterem eu. Ex sit veritus eleifend necessitatibus, blandit mnesarchum nam et, no volumus vituperatoribus his.
+						</li>
+					</ul>
+			</article>
+			<article>
+				<h1>Lorem Ipsum</h1>
+					<ul>
+						<li><img src="http://www.mediacollege.com/video/test-patterns/television/bbc-g.jpg"/>
+							No habeo everti accumsan nec. Duo ut dolor doctus voluptatibus, an nec putant scripta. Saperet nominavi ponderum nam id. Cum ex verear temporibus interpretaris, est te sale legere quaerendum. Meliore voluptaria eos in. Ei modus iudicabit est, his solum ancillae an.
+						</li>
+						<li>
+							Nam nisl appetere eu, illud invenire eloquentiam mea te. Ad mea postea consectetuer, pro explicari constituam cu. Quas clita vim at, laudem repudiare dignissim eam ei, paulo suscipit appellantur ex est. Utinam erroribus neglegentur no vel, nullam adversarium ad qui.
+						</li>
+						<li>
+							Nam assum senserit eu, vim at dicta tritani. Mei dicam principes intellegat eu, mei an aliquid vulputate. Quo postulant instructior deterruisset id. Ferri melius vidisse quo ad, pro nostrum verterem eu. Ex sit veritus eleifend necessitatibus, blandit mnesarchum nam et, no volumus vituperatoribus his.
+						</li>
+					</ul>
+			</article>
+			
+			<div id="bottom" class="bottom">
+				<button onclick="pre()">&#8592;</button>
+				<button onclick="prox()">&#8594;</button>
+			</div>
+
+		</section>
+
+	</body>
+
+	<!-- "Shortcut" is an external file made by Binny V. A. -->
+	<script type="text/javascript" src="js/shortcut.js"></script>
+	
+	<!-- "Gear" is the main javascript file -->
+	<script type="text/javascript" src="js/gear.js"></script>
+
+	<!-- "Fullscreen" is the part that control the fullscreen mode -->
+	<script type="text/javascript" src="js/fullscreen.js"></script>
+
+	<script type="text/javascript">
+	// Here Below, there's a list of keyboard shortcuts
+
+		shortcut.add("Right",
+			function() {
+				prox();
+			},
+			{ 'type':'keydown', 'propagate':true, 'target':document}
+		);  //Add shortcur to next slide
+
+		shortcut.add("Left",
+			function() {
+				pre();
+			},
+			{ 'type':'keydown', 'propagate':true, 'target':document}
+		); //Add shortcut to previous slide
+
+		shortcut.add("F4",
+			function() {
+				launchIntoFullscreen("pages");
+			},
+			{ 'type':'keydown', 'propagate':true, 'target':document}
+		); 
+
+	</script>
+
+</html>
